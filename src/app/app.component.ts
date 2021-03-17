@@ -30,6 +30,20 @@ export class AppComponent {
     }
 
   }
-
+  /*onChange($event){
+    //la variable que estamos utilizando le camboamos su propiedad font size que tenga otro valor. Definimos valor y medida
+    //ya no coge el valor definido arriba fijo
+    this.propiedadesParrafo.fontSize = `${$event.target.value}px`
+    //console.log($event.target.value);//nos devuelve el valor del input. Nos aparece el valor de progreso del range
+    
+  }*/
+  //otra opción
+  onInput($event){
+    //la variable que estamos utilizando le camboamos su propiedad font size que tenga otro valor. Definimos valor y medida
+    //ya no coge el valor definido arriba fijo
+    this.propiedadesParrafo.fontSize = `${$event.target.value}px`
+    //console.log($event.target.value);//nos devuelve el valor del input. Nos aparece el valor de progreso del range
+    
+  }
   
 }

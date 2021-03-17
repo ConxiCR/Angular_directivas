@@ -1,4 +1,5 @@
-<p [ngStyle]="propiedadesParrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+
+  <p [ngStyle]="propiedadesParrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
   Nostrum incidunt quaerat minus atque deserunt est vel labore ipsum enim?
 </p>
 <div>
@@ -8,4 +9,8 @@
 </div>
 <div>
   <input type="text" [(ngModel)]="propiedadesParrafo.color" >
+</div>
+<div>
+  <!--<input type="range" min="12" max="200" step="2" (change)="onChange($event)">-->
+  <input type="range" min="12" max="200" step="2" (input)="onInput($event)">
 </div>
