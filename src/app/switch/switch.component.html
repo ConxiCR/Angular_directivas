@@ -1,0 +1,14 @@
+<div [ngSwitch]="opcionNumero"> <!--variable que quiero evaluar-->
+    <p *ngSwitchCase="1">Opción 1</p>
+    <p *ngSwitchCase="2">Opción 2</p>
+    <p *ngSwitchCase="3" >Opción 3</p>
+    <p *ngSwitchCase="4" >Opción 4</p>
+    <p *ngSwitchDefault>Ninguna de las anteriores</p>
+</div>
+<div [ngSwitch]="opcionString"> <!--variable de tipo string. Se le colocan '' para que pueda evaluarlo y no busque una variable que se llame así-->
+    <p *ngSwitchCase="'uno'">Opción 1</p>
+    <p *ngSwitchCase="'dos'">Opción 2</p>
+    <p *ngSwitchCase="'tres'" >Opción 3</p>
+    <p *ngSwitchCase="'cuatro'" >Opción 4</p>
+    <p *ngSwitchDefault>Ninguna de las anteriores</p>
+</div>
