@@ -16,5 +16,15 @@
   <!--<input type="range" min="12" max="200" step="2" (change)="onChange($event)">-->
   <!--<input type="range" min="12" max="200" step="2" (input)="onInput($event)">
 </div> -->
-<p *ngIf="mostrar">Contenido del parráfo</p>
+<!--
+<p *ngIf="mostrar; then mainBlock else elseBlock">Contenido del parráfo</p>
+<ng-template #mainBlock>
+  <p>Contenido del primer parráfo</p>
+</ng-template>
+<ng-template #elseBlock>
+  <p>Contenido del segundo parráfo</p>
+</ng-template>
+-->
+<p *ngIf="mostrar">Contenido del primer párrafo</p>
+<p *ngIf="!mostrar">Contenido del segundo párrafo</p>
 <button (click)= "onClickMostrar()">Mostrar / ocultar</button>
