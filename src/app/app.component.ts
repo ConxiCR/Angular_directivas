@@ -8,12 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   propiedadesParrafo: any;
-
+  mostrar: boolean;
   constructor(){
     this.propiedadesParrafo = {
       color: 'red',
        fontSize:'24px'
     }
+    this.mostrar = false;
   }
 
   cambiaColor(pColor:string){
@@ -44,6 +45,9 @@ export class AppComponent {
     this.propiedadesParrafo.fontSize = `${$event.target.value}px`
     //console.log($event.target.value);//nos devuelve el valor del input. Nos aparece el valor de progreso del range
     
+  }
+  onClickMostrar(){
+    this.mostrar = !this.mostrar;
   }
   
 }
