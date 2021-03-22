@@ -1,0 +1,6 @@
+<!--<div class="semaforo"[ngClass]="'rojo'"></div><!--definimos la clase entre ''-->
+<!--<div [ngClass]="cadenaClases"></div><!--estoy aplicando las dos clases semaforo y rojo-->
+<!--<div [ngClass]="arrayClases"></div>-->
+<div [ngClass]="{semaforo:true, redondo:true, rojo:(colorSeleccionado === 'r'), verde:(colorSeleccionado === 'v'), amarillo:(colorSeleccionado === 'a')}"><!--seguiran el orden que tenga en la hoja de estilos .css-->
+
+</div>
