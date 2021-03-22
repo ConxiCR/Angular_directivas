@@ -1,6 +1,36 @@
 <!--queremos hacer una lista ul no ordenada. Genero estructura básica de los elementos-->
-<ul>
+<!--<ul>
     <li *ngFor="let persona of personas">
         {{persona.nombre}} {{persona.apellidos}} - {{persona.edad}}
     </li>
-</ul>
+</ul>-->
+
+<!--Aplicación tarjeta de contactos. Definimos la estructura para una de las personas. Agregamos un contenedor "personas" y un elemento para una persona-->
+<button (click)="onClick()">Agregar nueva persona</button>
+<div class="personas">
+    <div class="persona" *ngFor="let pers of personas">
+        <h3>{{pers.nombre}} {{pers.apellidos}}</h3>
+        <p>{{pers.calle}}</p>
+        <P>{{pers.telefono}}</P>
+    </div>
+</div>
+<!--otra manera de verlo. Representandolo en una tabla,cabecera,fila,4 th-->
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Calle</th>
+            <th>Teléfono</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pers of personas">
+            <td>{{ pers.nombre }}</td>
+            <td>{{ pers.apellidos }}</td>
+            <td>{{ pers.calle }}</td>
+            <td>{{ pers.telefono }}</td>
+        </tr>
+    </tbody>
+</table>
+
