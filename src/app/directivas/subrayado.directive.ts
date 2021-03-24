@@ -1,10 +1,16 @@
-import { Directive } from '@angular/core';
+import { Directive, ElementRef } from '@angular/core';
 
 @Directive({
-  selector: '[appSubrayado]'
+  selector: '[subrayado]'
 })
 export class SubrayadoDirective {
 
-  constructor() { }
+  constructor(elem: ElementRef) {
+    //console.log('Se está usando la directiva');
+    //console.log(elem);
+    //console.log(elem.nativeElement);
+    //cambiar al elemento sobre el que aplico la directiva el estilo textdecoration
+    elem.nativeElement.style.textDecoration = 'underline';
+   }
 
 }
