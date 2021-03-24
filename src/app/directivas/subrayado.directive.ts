@@ -1,10 +1,11 @@
-import { Directive, ElementRef, Renderer2, HostListener } from '@angular/core';
+import { Directive, ElementRef, Renderer2, HostListener, HostBinding } from '@angular/core';
 
 @Directive({
   selector: '[subrayado]'
 })
 export class SubrayadoDirective {
 
+  @HostBinding('class') isHover:string;
   constructor(private elem: ElementRef, private renderer: Renderer2) {
     //console.log('Se está usando la directiva');
     //console.log(elem);
@@ -18,9 +19,11 @@ export class SubrayadoDirective {
    //cuando el mouse pase por encima, cambiará el color
    @HostListener('mouseover') onHover(){
     this.renderer.setStyle(this.elem.nativeElement, 'color', 'green');
+    this.isHover = 'hover';
    }
    //para revertir el color
    @HostListener('mouseout') ononMouseOut(){
-    this.renderer.setStyle(this.elem.nativeElement, 'color', 'pink');
+    this.renderer.setStyle(this.elem.nativeElement, 'color', 'indigo');
+    this.isHover = 'noHover';
    }
 }
