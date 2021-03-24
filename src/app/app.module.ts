@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { SemaforoComponent } from './semaforo/semaforo.component';
 import { BuclesComponent } from './bucles/bucles.component';
 import { SwitchComponent } from './switch/switch.component';
+import { SubrayadoDirective } from './directivas/subrayado.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     SemaforoComponent,
     BuclesComponent,
-    SwitchComponent
+    SwitchComponent,
+    SubrayadoDirective
   ],
   imports: [
     BrowserModule,
