@@ -33,6 +33,8 @@
 <!--<app-bucles></app-bucles>-->
 <!--<app-switch></app-switch>-->
 <!--aplicamos directiva-->
-<p subrayado>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt, laborum.</p>
+<!--<p subrayado [config]="{ colorHover: 'orange', colorNoHover: 'blue'}">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt, laborum.</p>-->
+<!--De esta manera lo tenemos todo en la misma directiva sin poner atributos extras-->
+<p [subrayado]="{ colorHover: 'orange', colorNoHover: 'blue'}">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt, laborum.</p>
 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt, laborum.</p>
-<p subrayado>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt, laborum.</p>
+<p [subrayado]="{ colorHover: 'brown', colorNoHover: 'pink'}">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt, laborum.</p>
